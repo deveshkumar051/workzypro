@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: workzy-helper-api
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: SESSION_SECRET
+        sync: false
+      - key: CLIENT_URL
+        value: https://www.workzy.world
+      - key: HELPER_URL
+        value: https://helper.workzy.world
+      - key: PORT
+        value: 5000
